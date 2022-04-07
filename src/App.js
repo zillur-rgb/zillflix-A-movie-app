@@ -1,12 +1,16 @@
 import "./App.css";
 import Nav from "./Components/Nav/Nav";
-import Trending from "./Components/Trending/Trending";
+import Search from "./Components/Search/Search";
+import Pages from "./Pages/Pages/Pages";
 
 function App() {
   return (
-    <div className="container mx-auto">
-      <Nav />
-      <Trending />
+    <div className=" bg-gray-900 h-screen w-full">
+      <div className="container mx-auto pt-4 flex flex-col">
+        <Nav />
+        {/* <Search /> */}
+        <Pages />
+      </div>
     </div>
   );
 }
