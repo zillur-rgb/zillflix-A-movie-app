@@ -8,9 +8,9 @@ const Nav = () => {
   return (
     <div className="navbar menu-vertical bg-gray-800 rounded-lg">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case">
+        <Link to="/" className="btn btn-ghost normal-case">
           <MdMovie className="text-red-500 text-4xl" />
-        </a>
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">

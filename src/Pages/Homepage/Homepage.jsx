@@ -1,9 +1,10 @@
 import React from "react";
+import Trending from "../../Components/Trending/Trending";
 
 const Homepage = () => {
   return (
     <div>
-      <h1>This is Homepage page</h1>
+      <Trending />
     </div>
   );
 };
