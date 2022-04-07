@@ -1,5 +1,5 @@
 import React from "react";
-import { MdLocalMovies, MdWeb } from "react-icons/md";
+import { MdLocalMovies, MdWeb, MdBookmarkBorder } from "react-icons/md";
 
 const Single = ({ trend }) => {
   return (
@@ -12,6 +12,9 @@ const Single = ({ trend }) => {
       }}
       className="object-cover bg-center bg-cover rounded-xl my-2 relative"
     >
+      <div>
+        <MdBookmarkBorder className="text-white text-4xl rounded-full p-2 absolute top-2 right-2 cursor-pointer bg-gray-800 bg-opacity-80" />
+      </div>
       <div className="absolute bottom-0 left-0 text-white mb-5 ml-5">
         <div className="flex items-center">
           <p>
@@ -26,10 +29,12 @@ const Single = ({ trend }) => {
             ) : (
               <div className="flex items-center">
                 <MdWeb className="mr-1 text-2xl pt-1" />
-                <p>TV Series</p>
+                <p>TV Series </p>
               </div>
             )}
           </div>
+
+          <p> - Rating: {trend.vote_average}</p>
         </div>
         <h1 className="text-xl font-bold">
           {trend.original_title ? trend.original_title : trend.original_name}
