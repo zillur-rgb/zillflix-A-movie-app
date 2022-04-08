@@ -7,9 +7,9 @@ const useLatestTvSeries = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/tv/latest?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+        `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
       )
-      .then((res) => setLatestTv(res.data));
+      .then((res) => setLatestTv(res.data.results));
   }, []);
 
   return [latestTv, setLatestTv];
