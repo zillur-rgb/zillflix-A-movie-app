@@ -6,7 +6,7 @@ const Single = ({ trend }) => {
     <div
       style={{
         height: "300px",
-        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, .5)), url(
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url(
             ${process.env.REACT_APP_IMAGE_BASE}${trend.poster_path}
         )`,
       }}
