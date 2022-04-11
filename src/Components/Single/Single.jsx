@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
-import { MdLocalMovies, MdWeb, MdBookmarkBorder } from "react-icons/md";
+import React, { useContext, useState } from "react";
+import {
+  MdLocalMovies,
+  MdWeb,
+  MdBookmarkBorder,
+  MdBookmark,
+} from "react-icons/md";
 import { Link } from "react-router-dom";
 import BookmarkContext from "../BookmarkContext/BookmarkContext";
 
 const Single = ({ trend }) => {
-  const { addToBookmark } = useContext(BookmarkContext);
+  const { addToBookmark, removeFromBookmark } = useContext(BookmarkContext);
   return (
     <div
       style={{
@@ -17,7 +22,9 @@ const Single = ({ trend }) => {
     >
       <div>
         <MdBookmarkBorder
-          onClick={() => addToBookmark(trend)}
+          onClick={() => {
+            addToBookmark(trend);
+          }}
           className="text-white text-4xl rounded-full p-2 absolute top-2 right-2 cursor-pointer bg-gray-800 bg-opacity-80"
         />
       </div>
