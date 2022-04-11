@@ -18,10 +18,7 @@ const Searched = () => {
   return (
     <div className="my-10">
       <div className="header flex items-center gap-4">
-        <h1 className="text-white text-2xl font-bold">Latest Movies</h1>
-        <button className="text-purple-200 underline hover:no-underline">
-          View All
-        </button>
+        <h1 className="text-white text-2xl font-bold">Search results</h1>
       </div>
       <div className="grid grid-cols-4 gap-5 mt-2">
         {searchResult.map((res) => {

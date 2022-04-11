@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdLocalMovies, MdWeb, MdBookmarkBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
+import BookmarkContext from "../BookmarkContext/BookmarkContext";
 
 const Single = ({ trend }) => {
+  const { addToBookmark } = useContext(BookmarkContext);
   return (
     <div
       style={{
@@ -13,9 +16,15 @@ const Single = ({ trend }) => {
       className="object-cover bg-center bg-cover rounded-xl my-2 relative"
     >
       <div>
-        <MdBookmarkBorder className="text-white text-4xl rounded-full p-2 absolute top-2 right-2 cursor-pointer bg-gray-800 bg-opacity-80" />
+        <MdBookmarkBorder
+          onClick={() => addToBookmark(trend)}
+          className="text-white text-4xl rounded-full p-2 absolute top-2 right-2 cursor-pointer bg-gray-800 bg-opacity-80"
+        />
       </div>
-      <div className="absolute bottom-0 left-0 text-white mb-5 ml-5">
+      <Link
+        to={`/details/${trend.id}`}
+        className="absolute bottom-0 left-0 text-white mb-5 ml-5"
+      >
         <div className="flex items-center">
           <p>
             {trend.release_date ? trend.release_date.slice(0, 4) + " - " : " "}
@@ -39,7 +48,7 @@ const Single = ({ trend }) => {
         <h1 className="text-xl font-bold">
           {trend.original_title ? trend.original_title : trend.original_name}
         </h1>
-      </div>
+      </Link>
     </div>
   );
 };

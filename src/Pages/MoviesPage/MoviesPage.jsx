@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Single from "../../Components/Single/Single";
+import Search from "../../Components/Search/Search";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
@@ -14,6 +15,7 @@ const MoviesPage = () => {
   }, []);
   return (
     <div className="my-10">
+      <Search />
       <h1 className="text-white text-2xl font-bold">Latest Movies</h1>
 
       <div className="grid grid-cols-4 gap-3 mt-2">

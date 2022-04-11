@@ -3,7 +3,11 @@ import Single from "../Single/Single";
 
 const Trending = () => {
   const [trending] = useTrending();
-  console.log(trending);
+  // const [bookmark, setBookmark] = useBookmark();
+  // const bookmarkManager = (movie) => {
+  //   setBookmark(bookmark.concat(movie));
+  // };
+
   return (
     <div className="my-10">
       <div className="header flex items-center justify-between ">
