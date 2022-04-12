@@ -23,7 +23,7 @@ const Search = () => {
           type="text"
           value={search}
           placeholder="Search Here..."
-          className="input bg-gray-800 mt-3 focus:bg-gray-700 text-white w-3/5"
+          className="input text-lg bg-gray-800 mt-3 focus:bg-gray-700 text-gray-200 w-3/5"
           onChange={(e) => {
             setSearch(e.target.value);
           }}

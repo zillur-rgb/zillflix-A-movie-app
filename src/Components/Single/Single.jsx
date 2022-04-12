@@ -33,7 +33,7 @@ const Single = ({ trend, type }) => {
           </p>
 
           <div>
-            {trend.media_type === "movie" ? (
+            {type === "movie" ? (
               <div className="flex items-center">
                 <MdLocalMovies className="text-2xl mr-1 pt-1" /> Movie
               </div>

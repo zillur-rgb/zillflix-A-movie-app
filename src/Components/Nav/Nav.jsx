@@ -11,6 +11,7 @@ const Nav = () => {
       return true;
     }
   };
+
   return (
     <div className="navbar menu-vertical bg-gray-800 rounded-lg">
       <div className="flex-1">
@@ -22,22 +23,46 @@ const Nav = () => {
         <ul className="menu menu-horizontal p-0">
           <li>
             <Link to="/">
-              <CgMenuBoxed className="text-gray-700 text-3xl hover:text-gray-500" />
+              <CgMenuBoxed
+                className={
+                  matchPathRoute("/")
+                    ? "text-gray-300 hover:text-gray-300 text-3xl"
+                    : "text-gray-700 hover:text-gray-300 text-3xl"
+                }
+              />
             </Link>
           </li>
           <li>
             <Link to="/movies">
-              <MdLocalMovies className="text-gray-700 hover:text-gray-500 text-3xl" />
+              <MdLocalMovies
+                className={
+                  matchPathRoute("/movies")
+                    ? "text-gray-300 hover:text-gray-300 text-3xl"
+                    : "text-gray-700 hover:text-gray-300 text-3xl"
+                }
+              />
             </Link>
           </li>
           <li>
             <Link to="/series">
-              <MdWeb className="text-gray-700 hover:text-gray-500 text-3xl" />
+              <MdWeb
+                className={
+                  matchPathRoute("/series")
+                    ? "text-gray-300 hover:text-gray-300 text-3xl"
+                    : "text-gray-700 hover:text-gray-300 text-3xl"
+                }
+              />
             </Link>
           </li>
           <li>
             <Link to="/bookmark">
-              <MdBookmark className="text-gray-700 hover:text-gray-500 text-3xl " />
+              <MdBookmark
+                className={
+                  matchPathRoute("/bookmark")
+                    ? "text-gray-300 hover:text-gray-300 text-3xl"
+                    : "text-gray-700 hover:text-gray-300 text-3xl"
+                }
+              />
             </Link>
           </li>
         </ul>
