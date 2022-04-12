@@ -5,19 +5,6 @@ const Trending = () => {
   const [trending] = useTrending();
   let page = 6;
 
-  const onClickBtn = () => {
-    trending.slice(0, page + 3).map((trend) => {
-      return (
-        <div key={trend.id}>
-          <Single
-            trend={trend}
-            type={trend.media_type ? trend.media_type : "movie"}
-          />
-        </div>
-      );
-    });
-  };
-
   return (
     <div className="my-10 flex flex-col">
       <div className="header flex items-center justify-between ">
