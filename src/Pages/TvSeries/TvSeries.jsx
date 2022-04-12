@@ -15,7 +15,6 @@ const TvSeries = () => {
   }, []);
   return (
     <div className="my-10">
-      <Search />
       <div className="header flex items-center gap-4">
         <h1 className="text-white text-2xl font-bold">Latest TV Series</h1>
       </div>

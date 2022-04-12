@@ -15,7 +15,6 @@ const MoviesPage = () => {
   }, []);
   return (
     <div className="my-10">
-      <Search />
       <h1 className="text-white text-2xl font-bold">Latest Movies</h1>
 
       <div className="grid grid-cols-4 gap-3 mt-2">

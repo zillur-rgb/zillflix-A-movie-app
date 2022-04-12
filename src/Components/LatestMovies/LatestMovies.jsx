@@ -5,7 +5,7 @@ import Single from "../Single/Single";
 
 const LatestMovies = () => {
   const [latestMovies] = useLatestMovies();
-
+  console.log(latestMovies);
   return (
     <div className="my-10">
       <div className="header flex items-center gap-4">
@@ -20,7 +20,10 @@ const LatestMovies = () => {
         {latestMovies.slice(0, 4).map((latest) => {
           return (
             <div key={latest.id}>
-              <Single trend={latest} />
+              <Single
+                trend={latest}
+                type={latest.media_type ? latest.media_type : "movie"}
+              />
             </div>
           );
         })}

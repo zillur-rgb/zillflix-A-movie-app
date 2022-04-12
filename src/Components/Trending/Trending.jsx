@@ -18,7 +18,10 @@ const Trending = () => {
         {trending.slice(0, 6).map((trend) => {
           return (
             <div key={trend.id}>
-              <Single trend={trend} />
+              <Single
+                trend={trend}
+                type={trend.media_type ? trend.media_type : "movie"}
+              />
             </div>
           );
         })}

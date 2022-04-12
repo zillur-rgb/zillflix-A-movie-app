@@ -16,7 +16,7 @@ const Pages = () => {
         <Route path="/series" element={<TvSeries />} />
         <Route path="/bookmark" element={<Bookmark />} />
         <Route path="/searched/keyword=:keyword" element={<Searched />} />
-        <Route path="/details/:id" element={<Details />} />
+        <Route path="/details/:type/:id" element={<Details />} />
       </Routes>
     </div>
   );

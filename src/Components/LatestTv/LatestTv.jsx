@@ -20,7 +20,10 @@ const LatestTv = () => {
         {latestTv.slice(0, 4).map((latest) => {
           return (
             <div key={latest.id}>
-              <Single trend={latest} />
+              <Single
+                trend={latest}
+                type={latest.media_type ? latest.media_type : "tv"}
+              />
             </div>
           );
         })}

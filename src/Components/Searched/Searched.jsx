@@ -24,7 +24,10 @@ const Searched = () => {
         {searchResult.map((res) => {
           return (
             <div key={res.id}>
-              <Single trend={res} />
+              <Single
+                trend={res}
+                type={res.media_type ? res.media_type : "movie"}
+              />
             </div>
           );
         })}

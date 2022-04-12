@@ -1,10 +1,5 @@
 import React, { useContext } from "react";
-import {
-  MdBookmarkBorder,
-  MdBookmark,
-  MdLocalMovies,
-  MdWeb,
-} from "react-icons/md";
+import { MdBookmarkBorder, MdLocalMovies, MdWeb } from "react-icons/md";
 import { Link } from "react-router-dom";
 import BookmarkContext from "../../Components/BookmarkContext/BookmarkContext";
 

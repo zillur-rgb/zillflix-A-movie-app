@@ -1,15 +1,10 @@
-import React, { useContext, useState } from "react";
-import {
-  MdLocalMovies,
-  MdWeb,
-  MdBookmarkBorder,
-  MdBookmark,
-} from "react-icons/md";
+import React, { useContext } from "react";
+import { MdLocalMovies, MdWeb, MdBookmarkBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
 import BookmarkContext from "../BookmarkContext/BookmarkContext";
 
-const Single = ({ trend }) => {
-  const { addToBookmark, removeFromBookmark } = useContext(BookmarkContext);
+const Single = ({ trend, type }) => {
+  const { addToBookmark } = useContext(BookmarkContext);
   return (
     <div
       style={{
@@ -29,7 +24,7 @@ const Single = ({ trend }) => {
         />
       </div>
       <Link
-        to={`/details/${trend.id}`}
+        to={`/details/${type}/${trend.id}`}
         className="absolute bottom-0 left-0 text-white mb-5 ml-5"
       >
         <div className="flex items-center">

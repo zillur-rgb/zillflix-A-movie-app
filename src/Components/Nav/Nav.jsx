@@ -2,9 +2,15 @@ import React from "react";
 import "./Nav.css";
 import { MdLocalMovies, MdMovie, MdWeb, MdBookmark } from "react-icons/md";
 import { CgMenuBoxed } from "react-icons/cg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
+  const location = useLocation();
+  const matchPathRoute = (route) => {
+    if (location.pathname === route) {
+      return true;
+    }
+  };
   return (
     <div className="navbar menu-vertical bg-gray-800 rounded-lg">
       <div className="flex-1">
